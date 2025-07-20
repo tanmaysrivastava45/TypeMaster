@@ -4,7 +4,7 @@ function Result({ originalText, typedText, duration }) {
   const accuracy = ((correctChars / typedText.length) * 100).toFixed(2) || 0;
 
   const timeMinutes = duration / 60;
-  const wpm = Math.round((typedText.length / 5) / timeMinutes);
+  const wpm = Math.round((correctChars/5) / timeMinutes);
 
   return (
     <div className="mt-4 text-center">
